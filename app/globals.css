@@ -2,26 +2,225 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(18, 18, 62);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  font-size: 1.01rem;
+  color: rgb(153, 153, 226);
+}
+main hr {
+  border: 0;
+  background: #9c97f1;
+  height: 1.2px;
+  margin: 60px 84px;
+}
+.left {
+  font-size: 1.5rem;
+}
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  margin: 80px 0;
+  align-items: center;
+}
+.firstSection > div {
+  width: 30%;
+}
+.leftSection {
+  font-size: 2.5rem;
+}
+.leftSection .buttons{
+  padding: 50px 0;
+}
+.leftSection .btn {
+  padding: 12px;
+  background: #1e2167;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.rightSection img {
+  width: 90%;
+}
+.purple {
+  color: rgb(170, 107, 228);
+}
+.text-gray{
+  color: gray;
+}
+#element {
+  color: rgb(170, 107, 228);
+}
+.secondSection{
+  max-width: 80vw;
+  margin: auto;
+}
+.secondSection h1{
+  font-size: 1.9rem;
+}
+.secondSection .box {
+  background: white;
+  width: 80vw;
+  height: 2px;
+  margin: 80px 0;
+  display: flex;
+}
+.secondSection .vertical{
+  height: 93px;
+  width: 1px;
+  background-color: white;
+  margin: 0 150px;
+}
+.image-top{
+  width: 100px;
+  height: 23px;
+  position: relative;
+  top: -32px;
+  left: -9px;
+}
+.vertical-title{
+  position: relative;
+  top: 75px;
+  width: 150px;
+  font-size: 15px;
+}
+.vertical-desc{
+  position: relative;
+  top: 86px;
+  color: gray;
+  width: 150px;
+  font-size: 9px;
+}
+footer{
+  background-color: #0e0e1a;
+  
+  margin-top: 400px;
+
+}
+.footer{
+  display: flex;
+  padding: 23px 122px;
+  justify-content: space-evenly;
+}
+.footer ul{
+  list-style: none;
+}
+.footer > div{
+  width: 223px;
+}
+footer .footer-rights{
+  text-align: center;
+  color: gray;
+  padding: 12px 0;
+}
+
+@media  screen and (max-width: 1400px) {
+  body{
+      /* background-color: red; */
+  }
+  .box{
+      flex-direction: column;
+  }
+  .secondSection .vertical{
+      height: unset;
+  }
+  .vertical-title, .vertical-desc{
+      left: 45px;
+  }
+  .secondSection .box{
+      width: 50vw;
+  }
+ nav{
+  flex-direction: column;
+ }
+  
+  .firstSection{
+      flex-direction: column-reverse;
+  }
+  .leftSection{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .sectionSection{
+      height: 141px;
+  }
+  .rightSection{
+      width: 721px !important;
+      display: flex;
+      justify-content: center;
+  }
+  .rightSection img{
+      width: 45vw;
+      margin-bottom: 73px;
+  }
+  .secondSection{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .image-top {
+      top: 150px;
+  }
+ .footer{
+      display: flex;
+      /* flex-direction: column; */
+      margin-top: 800px;
+      align-items: center;
+  }
+ .footer-first{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+   .footer-second{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-third{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-fourth{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-rights{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 }
